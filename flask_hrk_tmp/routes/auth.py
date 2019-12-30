@@ -42,8 +42,7 @@ def login():
 
         if not error_message:
             login_user(user)
-            #return redirect(url_for('main.index'))
-            return redirect(url_for('home.html'))
+            return redirect(url_for('main.index'))
 
     return render_template('login.html')
 
