@@ -1,0 +1,6 @@
+/* Delete Database_Name database */
+DROP DATABASE IF EXISTS db_name;
+/* Create Database_Name database  */
+CREATE DATABASE db_name;
+/* Add username user */
+ALTER USER username WITH PASSWORD 'user_name_pass';
