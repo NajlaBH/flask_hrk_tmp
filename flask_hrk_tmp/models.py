@@ -12,35 +12,11 @@ from .extensions import db
 
 class User(UserMixin, db.Model):
     """Model for user accounts."""
-
-    __tablename__ = 'flasklogin_users'
-
-    id = db.Column(db.Integer,
-                   primary_key=True)
-    name = db.Column(db.String,
-                     nullable=False,
-                     unique=False)
-    email = db.Column(db.String(40),
-                      unique=True,
-                      nullable=False)
-    password = db.Column(db.String(200),
-                         primary_key=False,
-                         unique=False,
-                         nullable=False)
-    website = db.Column(db.String(60),
-                        index=False,
-                        unique=False,
-                        nullable=True)
-    created_on = db.Column(db.DateTime,
-                           index=False,
-                           unique=False,
-                           nullable=True)
-    last_login = db.Column(db.DateTime,
-                           index=False,
-                           unique=False,
-                           nullable=True)
-    expert = db.Column(db.Boolean)
-    admin = db.Column(db.Boolean)
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+    password = db.Column(db.String(100))
+    #expert = db.Column(db.Boolean)
+    #admin = db.Column(db.Boolean)
 
 
 

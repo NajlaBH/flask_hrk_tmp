@@ -1,3 +1,2 @@
-
 FLASK_ENVpr=production
 FLASK_APP=flask_hrk_tmp
