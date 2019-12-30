@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user, login_required
 
-from flask_qa.extensions import db
-from flask_qa.models import Question, User
+from flask_hrk_tmp.extensions import db
+from flask_hrk_tmp.models import Question, User
 
 main = Blueprint('main', __name__)
 
