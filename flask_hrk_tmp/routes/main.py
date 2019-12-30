@@ -16,7 +16,8 @@ def users():
     if not current_user.admin:
         return redirect(url_for('main.index'))
 
-    users = User.query.filter_by(admin=False).all()
+    #users = User.query.filter_by(admin=False).all()
+    users = User.query.all()
 
     context = {
         'users' : users
@@ -32,7 +33,7 @@ def promote(user_id):
 
     user = User.query.get_or_404(user_id)
 
-    user.expert = True
+    #user.expert = True
     db.session.commit()
 
     return redirect(url_for('main.users'))
